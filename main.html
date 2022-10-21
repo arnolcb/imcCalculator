@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+
+<h2>IMC calculator</h2>
+
+<script>
+    var weight;
+    var height;
+    var imc;
+
+    function saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+    
+    //Calcular IMC
+    function calcularIMC(){
+        imc = weight / (height * height);
+        return imc;
+    }
+
+    function rangoIMC(dato){
+        if(dato > 18.5 && dato > 24.9){
+            return "Tu peso es saludable";
+        } else
+        if(dato > 25.0 && dato > 29.9){
+            return "Te encuentras en sobrepeso";
+        } else
+        if(dato > 30.0 && dato > 34.9){
+            return "Tienes obesidad grado 1";
+        }
+    }
+
+    //Mensaje al usuario de Bienvenida
+    alert("Bienvenido al IMC calculator");
+    //Pedimos los datos al usuario
+    weight = prompt("Introduce tu peso en kilogramos");
+    height = prompt("Introduce tu altura en metros  ");
+
+    imprimir("Tu peso es: " + weight + " kg");
+    saltarlinea();
+    imprimir("Tu altura es: " + height + " m");
+    saltarlinea();
+    imprimir("Tu IMC es: " + calcularIMC());
+    saltarlinea();
+    imprimir(rangoIMC(calcularIMC()));
+</script>
