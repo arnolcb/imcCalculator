@@ -1,5 +1,7 @@
 <meta charset="UTF-8">
 
+<title>IMC Calculator</title>
+
 <h2>IMC calculator</h2>
 
 <script>
@@ -19,17 +21,18 @@
     //Calcular IMC
     function calcularIMC(){
         imc = weight / (height * height);
+        imc = imc.toFixed(2);
         return imc;
     }
 
     function rangoIMC(dato){
-        if(dato >= 18.5 && dato <= 24.9){
+        if(dato >= 18.5 && dato <= 24.99){
             return "Tu peso es saludable";
         } else
-        if(dato >= 25.0 && dato <= 29.9){
+        if(dato >= 25.0 && dato <= 29.99){
             return "Te encuentras en sobrepeso";
         } else
-        if(dato >= 30.0 && dato <= 34.9){
+        if(dato >= 30.0 && dato <= 34.99){
             return "Tienes obesidad grado 1";
         }
     }
