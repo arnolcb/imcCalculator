@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+    <!--Icono de ventana-->
+    <link rel="icon" href="img/imc.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Calculadora de IMC</h1>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="altura">Altura (cm):</label>
+            <input type="number" class="form-control" id="altura" placeholder="Altura en cm" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" class="form-control" id="peso" placeholder="Peso en kg" required>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary mt-3" onclick="calcularIMC()">Calcular IMC</button>
+      <div class="form-group mt-3">
+        <label for="resultado">Tu IMC es:</label>
+        <input type="text" class="form-control" id="resultado" readonly>
+        <small id="mensaje" class="form-text text-muted"></small>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
